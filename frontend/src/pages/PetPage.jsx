@@ -15,7 +15,7 @@ const PetPage = () => {
             <h1>Pets</h1>
             <ul>
                 {pets.map(pet => (
-                    <li key={pet._id}>{pet.name} - {pet.type} - {pet.age} anos</li>
+                    <li key={pet.id}>{pet.name} - {pet.type} - {pet.age} anos</li>
                 ))}
             </ul>
         </div>

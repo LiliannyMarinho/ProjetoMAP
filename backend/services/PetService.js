@@ -1,10 +1,9 @@
-const Pet = require('../models/Pet');
+const { Pet } = require('../models');
 
 exports.getAllPets = async () => {
-    return await Pet.find();
+    return await Pet.findAll();
 };
 
 exports.createPet = async (data) => {
-    const pet = new Pet(data);
-    return await pet.save();
+    return await Pet.create(data);
 };

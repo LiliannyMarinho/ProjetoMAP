@@ -1,9 +1,19 @@
-const mongoose = require('mongoose');
+const { DataTypes } = require('sequelize');
+const { sequelize } = require('./index');
 
-const petSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    type: { type: String, required: true },
-    age: { type: Number, required: true }
+const Pet = sequelize.define('Pet', {
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    type: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    age: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    }
 });
 
-module.exports = mongoose.model('Pet', petSchema);
+module.exports = Pet;
