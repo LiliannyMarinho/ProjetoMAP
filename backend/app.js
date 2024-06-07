@@ -1,14 +1,12 @@
 const express = require('express');
+const cors = require('cors');
+const clientesRouter = require('./routes/clientes');
+
 const app = express();
-const dotenv = require('dotenv');
 
-dotenv.config();
-
+app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-// Routes
-const petRoutes = require('./routes/petRoutes');
-app.use('/api/pets', petRoutes);
+app.use('/api/clientes', clientesRouter);
 
 module.exports = app;

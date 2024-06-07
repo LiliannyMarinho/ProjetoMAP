@@ -1,10 +1,9 @@
 const app = require('./app');
-const { sequelize } = require('./models');
+const { createClienteTable } = require('./models/cliente');
 
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 
-sequelize.sync().then(() => {
-    app.listen(port, () => {
-        console.log(`Server running on port ${port}`);
-    });
+app.listen(PORT, async () => {
+    await createClienteTable();
+    console.log(`Servidor rodando na porta ${PORT}`);
 });

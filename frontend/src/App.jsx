@@ -1,15 +1,13 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import PetPage from './pages/PetPage';
+import { Routes, Route } from 'react-router-dom';
+import Clientes from './pages/Clientes';
 
 function App() {
-  return (
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/pets" component={PetPage} />
-    </Switch>
-  );
+    return (
+        <Routes>
+            <Route path="/" element={<Clientes />} />
+        </Routes>
+    );
 }
 
 export default App;
