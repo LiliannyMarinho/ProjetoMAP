@@ -18,9 +18,9 @@ body {
 }
 
 header {
-  background-color: var(--color_04);
+  background-color: var(--color_01);
   color: var(--color-text);
-  padding: 10px 20px;
+  padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
