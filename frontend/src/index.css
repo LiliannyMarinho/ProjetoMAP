@@ -1,0 +1,32 @@
+:root {
+    --color_01: #52032b;
+    --color_02: #7d2c51;
+    --color_03: #a95478;
+    --color_04: #d47d9e;
+    --color_05: #ffa6c5;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color_05);
+    color: var(--color_01);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--color_02);
+}
+
+button {
+    background-color: var(--color_03);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color_04);
+}
