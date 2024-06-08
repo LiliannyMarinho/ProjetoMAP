@@ -1,61 +1,143 @@
 :root {
-  --color_01: #52032b;
+  --color_01: #52032b; /* Fundo do rodapé */
   --color_02: #7d2c51;
   --color_03: #a95478;
-  --color_04: #d47d9e;
+  --color_04: #d47d9e; /* Fundo do cabeçalho */
   --color_05: #ffa6c5;
+  --color-text: #fff; /* Cor do texto em geral */
+  --color-cta: #ff6347; /* Cor do botão Call-to-Action */
 }
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: var(--color_01);
 }
 
 header {
   background-color: var(--color_04);
-  color: #fff;
-  padding: 20px;
+  color: var(--color-text);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header h1 {
-  margin: 0;
+header .logo img {
+  height: 50px;
 }
 
-nav ul {
+header nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 20px;
+header nav ul li {
+  margin-left: 20px;
 }
 
-nav ul li a {
-  color: #fff;
+header nav ul li a {
+  color: var(--color-text);
   text-decoration: none;
+  font-weight: bold;
 }
 
 .banner {
   background-image: url('banner.jpg');
   background-size: cover;
-  color: #fff;
+  background-position: center;
+  color: var(--color-text);
   text-align: center;
   padding: 100px 20px;
 }
 
-.servicos {
-  padding: 50px 20px;
+.banner h1 {
+  color: var(--color_01);
+  font-size: 3em;
+  margin: 0;
 }
 
-.servico {
+.banner p {
+  color: var(--color_02);
+  font-size: 1.5em;
+}
+
+.banner .cta-button {
+  background-color: var(--color-cta);
+  color: var(--color-text);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.servicos, .produtos {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.servicos h2, .produtos h2 {
+  font-size: 2em;
   margin-bottom: 30px;
+  color: var(--color_02);
+}
+
+.servico, .produto {
+  display: inline-block;
+  width: 30%;
+  margin: 0 1.5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: var(--color-text);
+  color: var(--color_01);
+  text-align: left;
+  padding: 20px;
+}
+
+.servico img, .produto img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.servico h3, .produto h3 {
+  margin-top: 15px;
+  font-size: 1.5em;
+  color: var(--color_03);
+}
+
+.servico p, .produto p {
+  font-size: 1em;
 }
 
 footer {
   background-color: var(--color_01);
-  color: #fff;
+  color: var(--color-text);
   text-align: center;
   padding: 20px;
 }
+
+footer nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer nav ul li {
+  margin-left: 20px;
+}
+
+footer nav ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
