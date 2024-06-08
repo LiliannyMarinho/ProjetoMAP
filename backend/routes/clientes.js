@@ -1,22 +1,14 @@
 const express = require('express');
-const { getClientes, addCliente } = require('../models/cliente');
 const router = express.Router();
+const { pool } = require('../config/db');
 
+// Definindo uma rota de exemplo
 router.get('/', async (req, res) => {
     try {
-        const clientes = await getClientes();
-        res.status(200).json(clientes);
+        const result = await pool.query('SELECT * FROM CLIENTE');
+        res.status(200).json(result.rows);
     } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-router.post('/', async (req, res) => {
-    try {
-        const cliente = await addCliente(req.body);
-        res.status(201).json(cliente);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ error: 'Erro ao buscar clientes' });
     }
 });
 
