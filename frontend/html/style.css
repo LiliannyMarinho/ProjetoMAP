@@ -47,6 +47,22 @@ header nav ul li a {
   font-weight: bold;
 }
 
+.navmenu {
+  display: flex;
+}
+
+.navmenu a {
+  display: inline-block;
+  margin: 0 1.5rem;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: all 0.6s;
+}
+
+.navmenu a:hover {
+  transform: translateY(-5px);
+}
+
 .banner {
   background-image: url('banner.jpg');
   background-size: cover;
@@ -76,6 +92,10 @@ header nav ul li a {
   font-size: 1.2em;
   display: inline-block;
   margin-top: 20px;
+}
+
+main {
+  padding: 20px;
 }
 
 .servicos, .produtos {
@@ -114,6 +134,18 @@ header nav ul li a {
 
 .servico p, .produto p {
   font-size: 1em;
+}
+
+aside {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+aside h2 {
+  color:var(--color_02);
 }
 
 footer {
