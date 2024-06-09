@@ -1,19 +1,17 @@
-:root {
-  --color_01: #52032b; /* Fundo do rodapé */
-  --color_02: #7d2c51;
-  --color_03: #a95478;
-  --color_04: #d47d9e; /* Fundo do cabeçalho */
-  --color_05: #ffa6c5;
-  --color-text: #fff; /* Cor do texto em geral */
-  --color-cta: #ff6347; /* Cor do botão Call-to-Action */
-}
-
 @font-face {
   font-family: Fonte;
   src:url(/frontend/html/fonte/Elegante\ Classica.ttf);
 }
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+:root {
+  --color_01: #52032b;
+  --color_02: #7d2c51;
+  --color_03: #a95478;
+  --color_04: #d47d9e;
+  --color_05: #ffa6c5;
+  --color-text: #fff;
+  --color-cta: #ff6347;
+}
 
 body {
   font-family: Arial, sans-serif;
