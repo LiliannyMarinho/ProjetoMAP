@@ -120,6 +120,15 @@ main {
     justify-content: space-between;
 }
 
+#a1, #a2, #a3, #a4, #a5, #a6 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#a1:hover, #a2:hover, #a3:hover, #a4:hover, #a5:hover, #a6:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .servico,
 .produto {
     box-shadow: 0 0 8px #33333399;
