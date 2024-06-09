@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { getProdutos } from '../api'; // Altere a importação para a função que busca os produtos
+import { getProdutos } from '../api';
 
 function Home() {
-    const [produto, setProdutos] = useState([]);
+    const [produtos, setProdutos] = useState([]);
 
     useEffect(() => {
         async function fetchProdutos() {
@@ -17,14 +17,14 @@ function Home() {
     }, []);
 
     return (
-        <div>
-            <h1>Produtos</h1>
+        <>
+            <h1>Produtos:</h1>
             <ul>
-                {produto.map(produto => (
+                {produtos.map(produto => (
                     <li key={produto.id}>{produto.nome} - {produto.preco}</li>
                 ))}
             </ul>
-        </div>
+        </>
     );
 }
 

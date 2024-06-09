@@ -1,23 +1,13 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3001/clientes';
+const API_URL = 'http://localhost:3001/produto';
 
-export const getClientes = async () => {
+export const getProduto = async () => {
     try {
         const response = await axios.get(API_URL);
         return response.data;
     } catch (error) {
-        console.error('Erro ao buscar clientes', error);
-        throw error;
-    }
-};
-
-export const addCliente = async (cliente) => {
-    try {
-        const response = await axios.post(API_URL, cliente);
-        return response.data;
-    } catch (error) {
-        console.error('Erro ao adicionar cliente', error);
+        console.error('Erro ao buscar produto', error);
         throw error;
     }
 };

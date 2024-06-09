@@ -4,11 +4,11 @@ const { pool } = require('../config/db');
 
 router.get('/', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM produtos');
+        const result = await pool.query('SELECT * FROM produto');
         res.json(result.rows);
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: 'Erro ao buscar produtos.' });
+        res.status(500).json({ error: 'Erro ao buscar produto.' });
     }
 });
 
