@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const modalContainer = document.createElement('div');
     document.body.appendChild(modalContainer);
 
-    fetch('telinha.html')
+    fetch('cadastro.html')
         .then(response => response.text())
         .then(data => {
             modalContainer.innerHTML = data;
