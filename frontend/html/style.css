@@ -123,6 +123,13 @@ main {
   color: var(--color_02);
 }
 
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
 .servico, .produto {
   display: inline-block;
   width: 30%;
