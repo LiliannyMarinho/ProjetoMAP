@@ -9,4 +9,9 @@
     color: var(--color_06);
     font-size: 1.4rem;
     cursor: pointer;
+    transition: all 0.6s;
+}
+
+.nav a:hover {
+    transform: translateX(10px);
 }
