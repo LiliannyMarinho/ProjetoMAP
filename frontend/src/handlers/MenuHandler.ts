@@ -7,7 +7,7 @@ export class MenuHandler extends AbstractHandler {
         <nav class="menu">
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#abaout">Sobre</a></li>
+            <li><a href="#about">Sobre</a></li>
             <li><a href="#products">Produtos</a></li>
             <li><a href="#services">Serviços</a></li>
             <li><a href="#contact">Contato</a></li>
