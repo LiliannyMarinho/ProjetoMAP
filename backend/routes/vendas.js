@@ -4,13 +4,13 @@ import { query as _query } from '../config/db.js';
 const router = Router();
 
 router.post('/', async (req, res) => {
-  const { IDProduto, Nome, Descricao, Preco, Estoque } = req.body;
+  const { IDVenda, ClienteID, DataVenda, Total } = req.body;
   try {
     const query = `
-      INSERT INTO PRODUTO (IDProduto, Nome, Descricao, Preco, Estoque)
-      VALUES ($1, $2, $3, $4, $5) RETURNING *;
+      INSERT INTO VENDAS (IDVenda, ClienteID, DataVenda, Total)
+      VALUES ($1, $2, $3, $4) RETURNING *;
     `;
-    const result = await _query(query, [IDProduto, Nome, Descricao, Preco, Estoque]);
+    const result = await _query(query, [IDVenda, ClienteID, DataVenda, Total]);
     res.status(201).json(result.rows[0]);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
   try {
-    const result = await _query('SELECT * FROM PRODUTO');
+    const result = await _query('SELECT * FROM VENDAS');
     res.status(200).json(result.rows);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -28,14 +28,14 @@ router.get('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   const { id } = req.params;
-  const { Nome, Descricao, Preco, Estoque } = req.body;
+  const { ClienteID, DataVenda, Total } = req.body;
   try {
     const query = `
-      UPDATE PRODUTO
-      SET Nome = $1, Descricao = $2, Preco = $3, Estoque = $4
-      WHERE IDProduto = $5 RETURNING *;
+      UPDATE VENDAS
+      SET ClienteID = $1, DataVenda = $2, Total = $3
+      WHERE IDVenda = $4 RETURNING *;
     `;
-    const result = await _query(query, [Nome, Descricao, Preco, Estoque, id]);
+    const result = await _query(query, [ClienteID, DataVenda, Total, id]);
     res.status(200).json(result.rows[0]);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -45,7 +45,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   const { id } = req.params;
   try {
-    const query = 'DELETE FROM PRODUTO WHERE IDProduto = $1 RETURNING *;';
+    const query = 'DELETE FROM VENDAS WHERE IDVenda = $1 RETURNING *;';
     const result = await _query(query, [id]);
     res.status(200).json(result.rows[0]);
   } catch (error) {

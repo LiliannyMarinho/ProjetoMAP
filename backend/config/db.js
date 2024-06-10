@@ -1,20 +1,21 @@
-const { Pool } = require('pg');
+import pkg from 'pg';
+const { Pool } = pkg;
+
+import dotenv from 'dotenv';
+dotenv.config();
 
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'projeto_map',
-    password: 'Thmpv07',
-    port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 });
 
-pool.connect((err) => {
-    if (err) {
-        console.error('Erro ao conectar ao banco de dados PostgreSQL', err);
-    } else {
-        console.log('Conectado ao banco de dados PostgreSQL');
-    }
-});
+export const connect = async () => {
+  const client = await pool.connect();
+  return client;
+};
 
-module.exports = { pool };
-
+export const query = (text, params) => pool.query(text, params);
+export default pool;
