@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             modalContainer.innerHTML = data;
             const closeModalButton = document.getElementById("close-modal");
             const modal = document.getElementById("modal");
+            const signupForm = document.querySelector("form");
 
             openModalButton.addEventListener("click", function(event) {
                 event.preventDefault();
@@ -23,6 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (event.target === modal) {
                     modal.style.display = "none";
                 }
+            });
+
+            signupForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+                modal.style.display = "none";
+                showAdditionalInfoModal();
             });
         })
         .catch(error => console.error('Erro ao carregar o modal:', error));

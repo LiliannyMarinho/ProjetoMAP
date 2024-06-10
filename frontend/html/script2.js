@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
             loginContainer.innerHTML = data;
             const closeLoginButton = document.getElementById("close-login-modal");
             const loginModal = document.getElementById("login-modal");
+            const loginForm = document.querySelector("form");
 
             openLoginButton.addEventListener("click", function(event) {
                 event.preventDefault();
@@ -24,6 +25,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (event.target === loginModal) {
                     loginModal.style.display = "none";
                 }
+            });
+
+            loginForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+                loginModal.style.display = "none";
+                showAdditionalInfoModal();
             });
         })
         .catch(error => console.error('Erro ao carregar o modal de login:', error));
