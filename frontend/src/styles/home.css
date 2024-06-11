@@ -1,7 +1,5 @@
-.banner {
-    background-image: url('./imagens/bg_home.jpeg');
-    background-size: cover;
-    background-position: center;    
+.banner {    
+    height: 100%;   
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -11,7 +9,7 @@
 .banner article {
     color: var(--color-text);
     text-align: center;
-    padding: 100px 20px;
+    padding: 250px 20px;
     flex: 1 1 calc(50% - 20px);
     box-sizing: border-box;
 }
@@ -19,6 +17,7 @@
 .banner article h1 {
     color: var(--color_01);
     font-size: 3em;
+    line-height: 5rem;
     margin: 0;
 }
 
