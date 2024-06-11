@@ -4,13 +4,13 @@ import { query as _query } from '../config/db.js';
 const router = Router();
 
 router.post('/', async (req, res) => {
-  const { IDFornecedor, Nome, Telefone, Endereco } = req.body;
+  const { IDFornecedor, Nome, Telefone, Endereco, CNPJ } = req.body;
   try {
     const query = `
-      INSERT INTO FORNECEDOR (IDFornecedor, Nome, Telefone, Endereco)
-      VALUES ($1, $2, $3, $4) RETURNING *;
+      INSERT INTO FORNECEDOR (IDFornecedor, Nome, Telefone, Endereco, CNPJ)
+      VALUES ($1, $2, $3, $4, $5) RETURNING *;
     `;
-    const result = await _query(query, [IDFornecedor, Nome, Telefone, Endereco]);
+    const result = await _query(query, [IDFornecedor, Nome, Telefone, Endereco, CNPJ]);
     res.status(201).json(result.rows[0]);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -18,8 +18,15 @@ router.post('/', async (req, res) => {
 });
 
 router.get('/', async (req, res) => {
+  const limit = parseInt(req.query.limit) || 10;
+  const offset = parseInt(req.query.offset) || 0;
+
   try {
-    const result = await _query('SELECT * FROM FORNECEDOR');
+    const query = `
+      SELECT * FROM FORNECEDOR
+      LIMIT $1 OFFSET $2;
+    `;
+    const result = await _query(query, [limit, offset]);
     res.status(200).json(result.rows);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -28,14 +35,14 @@ router.get('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   const { id } = req.params;
-  const { Nome, Telefone, Endereco } = req.body;
+  const { Nome, Telefone, Endereco, CNPJ } = req.body;
   try {
     const query = `
       UPDATE FORNECEDOR
-      SET Nome = $1, Telefone = $2, Endereco = $3
-      WHERE IDFornecedor = $4 RETURNING *;
+      SET Nome = $1, Telefone = $2, Endereco = $3, CNPJ = $4
+      WHERE IDFornecedor = $5 RETURNING *;
     `;
-    const result = await _query(query, [Nome, Telefone, Endereco, id]);
+    const result = await _query(query, [Nome, Telefone, Endereco, CNPJ, id]);
     res.status(200).json(result.rows[0]);
   } catch (error) {
     res.status(500).json({ error: error.message });

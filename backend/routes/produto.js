@@ -1,3 +1,4 @@
+// routes/products.js
 import { Router } from 'express';
 import { query as _query } from '../config/db.js';
 
@@ -18,8 +19,15 @@ router.post('/', async (req, res) => {
 });
 
 router.get('/', async (req, res) => {
+  const limit = parseInt(req.query.limit) || 10;
+  const offset = parseInt(req.query.offset) || 0;
+
   try {
-    const result = await _query('SELECT * FROM PRODUTO');
+    const query = `
+      SELECT * FROM PRODUTO
+      LIMIT $1 OFFSET $2;
+    `;
+    const result = await _query(query, [limit, offset]);
     res.status(200).json(result.rows);
   } catch (error) {
     res.status(500).json({ error: error.message });
