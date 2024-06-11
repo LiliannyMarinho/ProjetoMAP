@@ -18,7 +18,6 @@ const Main: React.FC = () => {
         {Sobre()}
       </section>
       <section id='products'>
-        <h1>Site em construção</h1>
         <h1>Produtos</h1>
         {Produto()}
       </section>
