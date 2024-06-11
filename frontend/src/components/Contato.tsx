@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/contato.css';
+import mapa from '../html/imagens/mapa.jpeg';
 
 const Contato = () => {
     return (
@@ -11,27 +12,21 @@ const Contato = () => {
                     contato com você. Agradeço o interesse e aguardo seu contato!</p>
                 <div className="icons">
                     <div className="row">
-                        <i className="fas fa-user"></i>
+                        <i className="fas fa-envelope"></i>
                         <div className="info">
-                            <div className="head">Nome</div>
-                            <div className="sub-title">Everalo Martins</div>
+                            <div className="head">E-mail</div>
+                            <div className="sub-title">patanaporta@gmail.com</div>
                         </div>
                     </div>
                     <div className="row">
                         <i className="fas fa-map-marker-alt"></i>
                         <div className="info">
-                            <div className="head">Endereço</div>
-                            <div className="sub-title">Rua Quatro de Outubro, Santa Luzia, Paraíba</div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <i className="fas fa-envelope"></i>
-                        <div className="info">
-                            <div className="head">E-mail</div>
-                            <div className="sub-title">everaldoinfortecnico@gmail.com</div>
+                            <div className="head">Endereço:</div>
+                            <div className="sub-title">R. Alfredo Lustosa Cabral, s/n - Salgadinho, Patos - PB, 58706-550, Paraíba</div>
                         </div>
                     </div>
                 </div>
+                <div className='mapa'><img src={mapa} alt="Mapa de localização" className="info-image" /></div>
             </div>
             <div className="column right">
                 <div className="text">Envie-me uma mensagem</div>
