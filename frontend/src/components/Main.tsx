@@ -17,8 +17,7 @@ const Main: React.FC = () => {
         {Sobre()}
       </section>
       <section id='products'>
-        <h1>Site em construção</h1>
-        <h1>Produtos</h1>
+        <h1><i className="fa-solid fa-bag-shopping"></i> Pordutos</h1>
         {Produto()}
       </section>
       <section id='services'>
