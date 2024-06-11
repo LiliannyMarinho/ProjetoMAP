@@ -8,7 +8,7 @@ const Home = () => {
                 <article>
                     <h1>Bem-vindo (a)!</h1>
                     <p>Somos o PataNaPorta. Os melhores produtos e serviços para o seu pet.</p>
-                    <a href="#" className="cta-button">Saiba Mais</a>
+                    <a href="#contact" className="cta-button">Saiba Mais</a>
                 </article>
                 <article>
 

@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
+    border-radius: 8px;
 }
 
 .about_container .text p {

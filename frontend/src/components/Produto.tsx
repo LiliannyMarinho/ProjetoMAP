@@ -1,32 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/produto.css';
-import racao from '../assets/racao.png';
-import brinquedo from '../assets/brinquedo.png';
-import acessorio from '../assets/acessorio.webp';
+import img from '../assets/pets.webp';
+import ApiService from '../services/ApiService';
+
+const apiService = new ApiService('http://localhost:3000');
+
+interface Produto {
+  idproduto: number;
+  nome: string;
+  descricao: string;
+  preco: string;
+  quantidade: string;
+}
 
 
 const Produto = () => {
-    return (
-        <>           
-            <div className="articles-container">
-                <article id="a1" className="produto">
-                    <img src={racao} alt="racao" className="info-image" />
-                    <h3>Ração Premium</h3>
-                    <p>A melhor nutrição para o seu pet.</p>
-                </article>
-                <article id="a2" className="produto">
-                    <img src={brinquedo} alt="brinquedo" className="info-image" />
-                    <h3>Brinquedos</h3>
-                    <p>Diversão garantida com nossos brinquedos.</p>
-                </article>
-                <article id="a3" className="produto">
-                    <img src={acessorio} alt="acessorio" className="info-image" />
-                    <h3>Acessórios</h3>
-                    <p>Tudo que seu pet precisa para o dia a dia.</p>
-                </article>
-            </div>            
-        </>
-    );
+    const [produtos, setProdutos] = useState<Produto[]>([]);
+
+    useEffect(() => {
+      const fetchProdutos = async () => {
+        try {
+          const data = await apiService.get('/produto');
+          setProdutos(data);
+        } catch (error) {
+          console.error('Erro ao buscar Produtos:', error);
+        }
+      };
+  
+      fetchProdutos();
+    }, []);
+
+  return (
+    <div className="articles-container">
+      {produtos.map(produto => (
+        <article key={produto.idproduto} className="produto">
+          <img src={img} alt={produto.nome} className="info-image" />
+          <h3>{produto.nome}</h3>
+          <p>{produto.descricao}</p>
+        </article>
+      ))}
+    </div>
+  );
 };
 
 export default Produto;

@@ -25,15 +25,19 @@
 .articles-container .produto img {
     max-width: 100%;
     border-radius: 10px;
+    border-radius: 8px;
 }
 
 .articles-container .produto h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .articles-container .produto p {
     font-size: 1rem;
-    margin-bottom: 20px;
+    line-height: 1.4rem;
+    text-align: justify;
 }
 
