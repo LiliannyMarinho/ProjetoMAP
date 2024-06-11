@@ -1,0 +1,81 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+:root {
+    --color_01: #52032b;
+    --color_02: #7d2c51;
+    --color_03: #a95478;
+    --color_04: #d47d9e;
+    --color_05: #ffa6c5;
+    --color-text: #f3f3f3;
+    --color-cta: #ff6347;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    min-height: 100vh;
+}
+
+body {
+    line-height: 1;
+}
+
+body {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--color-text);
+    color: var(--color_01);
+}
+
+.servicos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.articles-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.servico {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.servico:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.servico h3 {
+    margin-top: 0;
+    color: var(--color_01);
+}
+
+.servico p {
+    color: var(--color_02);
+}
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
