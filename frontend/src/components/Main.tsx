@@ -13,19 +13,20 @@ const Main: React.FC = () => {
         {Home()}
       </section>
       <section id='about'>
-        <h1>Site em construção</h1>
-        <h1>Sobre</h1>
+        <h1><i className="fa-solid fa-address-card"></i> Sobre</h1>        
         {Sobre()}
       </section>
       <section id='products'>
+        <h1>Site em construção</h1>
         <h1>Produtos</h1>
         {Produto()}
       </section>
       <section id='services'>
-        <h2><i className="fa-solid fa-hand-holding-heart"></i> Nossos Serviços</h2>
+        <h1><i className="fa-solid fa-user-doctor"></i> Serviços</h1>
         {Servico()}
       </section>
       <section id='contact'>
+        <h1><i className="fa-solid fa-chalkboard"></i> Contato</h1>
         {Contato()}
       </section>
     </main>

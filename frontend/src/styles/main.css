@@ -14,5 +14,13 @@ main section {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-    justify-content: space-between;
+}
+
+main section h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    color: var(--color_01);
 }
