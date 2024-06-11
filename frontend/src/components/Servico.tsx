@@ -4,7 +4,7 @@ import estetica from '../assets/estetica.webp';
 import vet from '../assets/vet(1).png';
 import shampoocondicionador from '../assets/shampoocondicionador.webp';
 
-const Servico: React.FC = () => {
+const Servico = () => {
     return (
         <>            
             <div className="articles-container">

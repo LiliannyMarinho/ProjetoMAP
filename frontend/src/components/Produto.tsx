@@ -7,7 +7,7 @@ import acessorio from '../assets/acessorio.webp';
 
 const Produto = () => {
     return (
-        <>
+        <>           
             <div className="articles-container">
                 <article id="a1" className="produto">
                     <img src={racao} alt="racao" className="info-image" />
