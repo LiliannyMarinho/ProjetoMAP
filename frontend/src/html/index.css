@@ -1,0 +1,217 @@
+/* Import fonts and Icons */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+:root {
+    --color_01: #52032b;
+    --color_02: #7d2c51;
+    --color_03: #a95478;
+    --color_04: #d47d9e;
+    --color_05: #ffa6c5;
+    --color-text: #f3f3f3;
+    --color-cta: #ff6347;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    min-height: 100vh;
+}
+
+body {
+    line-height: 1;
+}
+
+body {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--color-text);
+    color: var(--color_01);
+}
+
+header {
+    background-color: var(--color_01);
+    color: var(--color-text);
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 45px;
+}
+
+.navmenu {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navmenu li a {
+    display: inline-block;
+    color: var(--color-text);
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 0.6s;
+}
+
+.navmenu li a i{
+    font-size: 1.5rem;
+}
+
+.navmenu li a:hover {
+    transform: translateY(-5px);
+}
+
+.banner {
+    background-image: url('./imagens/bg_home.jpeg');
+    background-size: cover;
+    background-position: center;    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.banner article {
+    color: var(--color-text);
+    text-align: center;
+    padding: 100px 20px;
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.banner article h1 {
+    color: var(--color_01);
+    font-size: 3em;
+    margin: 0;
+}
+
+.banner article p {
+    color: var(--color_02);
+    font-size: 1.5em;
+}
+
+.banner article .cta-button {
+    background-color: var(--color_01);
+    color: var(--color_05);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#a1, #a2, #a3, #a4, #a5, #a6 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#a1:hover, #a2:hover, #a3:hover, #a4:hover, #a5:hover, #a6:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.servico,
+.produto {
+    box-shadow: 0 0 8px #33333399;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    color: var(--color_01);
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.servicos h2,
+.produtos h2 {
+    font-size: 2em;
+    margin: 40px 0 20px 0;
+    text-align: center;
+    color: var(--color_02);
+}
+
+.servicos img,
+.produtos img {
+    max-width: 100%;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.servicos h3,
+.produtos h3 {    
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color_03);
+}
+
+.servicos p,
+.produtos p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+aside {
+    background-color: var(--color-text);
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px var(--color_01);
+    border-radius: 10px;
+}
+
+aside h2 {
+    color: var(--color_02);
+    text-align: center;
+}
+
+aside h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+}
+
+aside p {
+    text-align: center;
+}
+
+footer {
+    background-color: var(--color_01);
+    color: var(--color-text);
+    text-align: center;
+    padding: 20px;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul li {
+    margin-left: 20px;
+}
+
+footer nav ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: bold;
+}
