@@ -34,7 +34,7 @@ const Produto = () => {
     <div className="articles-container">
       {produtos.map(produto => (
         <article key={produto.idproduto} className="produto">
-          <img src={img} alt={produto.nome} className="info-image" />
+          <img src={img} alt={produto.nome} />
           <h3>{produto.nome}</h3>
           <p>{produto.descricao}</p>
         </article>
