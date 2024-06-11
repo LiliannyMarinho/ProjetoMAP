@@ -19,6 +19,7 @@ const Main: React.FC = () => {
         <h1>Produtos</h1>
       </section>
       <section id='services'>
+        <h2><i className="fa-solid fa-hand-holding-heart"></i> Nossos Serviços</h2>
         {Servico()}
       </section>
       <section id='contact'>

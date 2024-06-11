@@ -4,12 +4,11 @@ import estetica from '../html/imagens/estetica.webp';
 import vet from '../html/imagens/vet(1).png';
 import shampoocondicionador from '../html/imagens/shampoocondicionador.webp';
 
-const Servicos: React.FC = () => {
+const Servico: React.FC = () => {
     return (
-        <body>
-            <main>
+        <>
+            <div>
                 <section id="s1" className="servicos">
-                    <h2><i className="fa-solid fa-hand-holding-heart"></i> Nossos Serviços</h2>
                     <div className="articles-container">
                         <article id="a1" className="servico">
                             <img src={estetica} alt="BanhoTosa" />
@@ -28,8 +27,8 @@ const Servicos: React.FC = () => {
                         </article>
                     </div>
                 </section>
-            </main>
-        </body>
+            </div>
+        </>
     );
 };
 
