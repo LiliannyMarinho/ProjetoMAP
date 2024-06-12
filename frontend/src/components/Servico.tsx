@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/servico.css';
 import estetica from '../assets/images/estetica.webp';
-import vet from '../assets/images/vet.png';
+import vet from '../assets/images/vet.webp';
 import produto from '../assets/images/produto.webp';
 
 const Servico = () => {
@@ -19,7 +19,7 @@ const Servico = () => {
                     <p>Cuidados veterinários de qualidade para a saúde do seu pet.</p>
                 </article>
                 <article className="servico">
-                    <img src={shampoocondicionador} alt="shampoo" />
+                    <img src={produto} alt="shampoo" />
                     <h3>Produtos</h3>
                     <p>Garanta a melhor qualidade em produtos para seu pet.</p>
                 </article>
@@ -34,7 +34,7 @@ const Servico = () => {
                     <p>Cuidados veterinários de qualidade para a saúde do seu pet.</p>
                 </article>
                 <article className="servico">
-                    <img src={shampoocondicionador} alt="shampoo" />
+                    <img src={produto} alt="shampoo" />
                     <h3>Produtos</h3>
                     <p>Garanta a melhor qualidade em produtos para seu pet.</p>
                 </article>
