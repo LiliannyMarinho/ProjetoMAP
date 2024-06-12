@@ -10,6 +10,7 @@ import produtoRoutes from './routes/produto.js';
 import contemRoutes from './routes/contem.js';
 import consultaRoutes from './routes/consulta.js';
 import fornecedorRoutes from './routes/fornecedor.js';
+import funcionarioRoutes from './routes/funcionario.js';
 import ofereceRoutes from './routes/oferece.js';
 import { setupDatabase } from './setupDatabase.js';
 
@@ -29,6 +30,7 @@ app.use('/produto', produtoRoutes);
 app.use('/contem', contemRoutes);
 app.use('/consulta', consultaRoutes);
 app.use('/fornecedor', fornecedorRoutes);
+app.use('/funcionario', funcionarioRoutes);
 app.use('/oferece', ofereceRoutes);
 
 const startServer = async () => {
