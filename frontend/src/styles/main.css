@@ -1,0 +1,17 @@
+main { 
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    padding: 10px;
+    min-height: 100vh;
+    transition: all 0.6s;
+}
+
+main section {
+    display: flex;
+    width: 100%;    
+    max-width: 1300px;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}

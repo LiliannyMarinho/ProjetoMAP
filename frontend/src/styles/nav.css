@@ -1,0 +1,17 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    gap: 20px;
+}
+
+.nav a, .nav span {
+    color: var(--color_06);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.nav a:hover {
+    transform: translateX(10px);
+}

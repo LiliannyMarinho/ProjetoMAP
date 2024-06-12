@@ -1,0 +1,24 @@
+.header {
+    width: 100vw;
+    background-color: var(--color_01);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.header section {
+    width: 100%;
+    max-width: 1300px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header section .logo {
+    height: 50px;
+}
