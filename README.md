@@ -1,97 +1,141 @@
 # ProjetoMAP
 
-## Descrição
-
-ProjetoMAP é um aplicativo de petshop desenvolvido utilizando Vite com React no front-end e Node.js com PostgreSQL no back-end. O projeto segue o padrão de desenvolvimento cadeia de responsabilidade.
+ProjetoMAP é um aplicativo de petshop desenvolvido utilizando Vite, React, Typescript e Axios no frontend e Node.js com PostgreSQL no backend. O projeto segue o padrão de desenvolvimento cadeia de responsabilidade, MVC, utilizando o padrão de desenvolvimento cliente-servidor.
 
 ## Estrutura do Projeto
 
 ```
 ProjetoMAP/
 ├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── services/
 │   ├── config/
 │   │   └── db.js
-│   ├── app.js
+│   ├── routes/
+│   │   ├── adquire.js
+│   │   ├── animal.js
+│   │   ├── cliente.js
+│   │   ├── consulta.js
+│   │   ├── contem.js
+│   │   ├── fornecedor.js
+│   │   ├── oferece.js
+│   │   ├── produto.js
+│   │   ├── trata.js
+│   │   ├── vendas.js
+│   │   └── veterinario.js
+│   ├── .env
+│   ├── package.json
 │   ├── server.js
+│   ├── setup.sql
+│   └── setupDatabase.js
 ├── frontend/
 │   ├── src/
 │   │   ├── assets/
+│   │   │   ├── images/
+│   │   │   └── logo/
 │   │   ├── components/
-│   │   ├── pages/
+│   │   │   ├── Contato.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Header.tsx
+│   │   │   ├── Home.tsx
+│   │   │   ├── Logo.tsx
+│   │   │   ├── Main.tsx
+│   │   │   ├── Menu.tsx
+│   │   │   ├── Nav.tsx
+│   │   │   ├── Produto.tsx
+│   │   │   ├── Servico.tsx
+│   │   │   └── Sobre.tsx
+│   │   ├── handlers/
+│   │   │   ├── AbstractHandler.ts
+│   │   │   ├── LogoHandler.ts
+│   │   │   ├── MenuHandler.ts
+│   │   │   └── NavHandler.ts
+│   │   ├── services/
+│   │   │   └── ApiService.ts
+│   │   ├── styles/
+│   │   │   ├── about.css
+│   │   │   ├── contato.css
+│   │   │   ├── footer.css
+│   │   │   ├── header.css
+│   │   │   ├── home.css
+│   │   │   ├── index.css
+│   │   │   ├── main.css
+│   │   │   ├── menu.css
+│   │   │   ├── nav.css
+│   │   │   ├── produto.css
+│   │   │   └── servico.css
 │   │   ├── App.jsx
-│   │   ├── main.jsx
+│   │   └── main.jsx
 │   ├── index.html
-│   ├── vite.config.js
-│   └── package.json
+│   ├── package.json
+│   └── vite.config.js
 ├── .gitignore
-├── README.md
-└── package.json
+├── package.json
+└── README.md
 ```
 
-## Configuração do Banco de Dados
+## Tecnologias Utilizadas
 
-O banco de dados utilizado é o PostgreSQL. As tabelas são criadas conforme o script SQL fornecido na pasta `backend/models`.
+- **Frontend**: Vite, React, TypeScript, Axios
+- **Backend**: Node.js, PostgreSQL
 
-## Instalação
+## Padrões de Desenvolvimento
+
+- **Padrão Cadeia de Responsabilidade**
+- **MVC (Model-View-Controller)**
+- **Cliente-Servidor**
+
+## Instalação e Execução
 
 ### Backend
 
-1. Navegue até a pasta `backend`:
-    ```bash
-    cd backend
-    ```
+1. Navegue até o diretório `backend`:
+   ```bash
+   cd backend
+   ```
 
-2. Instale as dependências:
-    ```bash
-    npm install
-    ```
+2. Configure as variáveis de ambiente no arquivo `.env`.
+    ```text
+    DB_USER=user
+    DB_HOST=host
+    DB_DATABASE=bank
+    DB_PASSWORD=pass
+    DB_PORT=5432
+   ```
 
-3. Configure o banco de dados PostgreSQL no arquivo `config/db.js`.
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
 4. Inicie o servidor:
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 ### Frontend
 
-1. Navegue até a pasta `frontend`:
-    ```bash
-    cd frontend
-    ```
-
+1. Navegue até o diretório `frontend`:
+   ```bash
+   cd frontend
+   ```
 2. Instale as dependências:
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
-3. Inicie o projeto:
-    ```bash
-    npm run dev
-    ```
+## Estrutura de Diretórios
 
-## Endpoints
+- **backend/config**: Configurações de banco de dados.
+- **backend/routes**: Definições de rotas da API.
+- **frontend/src/assets**: Imagens e logos.
+- **frontend/src/components**: Componentes React.
+- **frontend/src/handlers**: Handlers para a lógica de negócios.
+- **frontend/src/services**: Serviços para chamadas à API.
+- **frontend/src/styles**: Arquivos CSS.
 
-### Clientes
+## Licença
 
-- `GET /api/clientes` - Retorna a lista de clientes.
-- `POST /api/clientes` - Adiciona um novo cliente.
-
-## Estrutura de Dados
-
-### Cliente
-
-- `IDCliente` - Identificador único do cliente.
-- `Nome` - Nome do cliente.
-- `CPF` - CPF do cliente.
-- `Endereco` - Endereço do cliente (tipo composto).
-- `Telefone` - Telefone do cliente.
-- `Email` - Email do cliente.
-
-## License
-
-Este projeto está licenciado sob os termos da licença MIT.
+Este projeto está licenciado sob a MIT License. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.

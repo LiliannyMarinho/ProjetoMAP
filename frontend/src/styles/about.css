@@ -5,7 +5,7 @@
 }
 
 .about_container .imgbg {
-    background: var(--color_06) url(../assets/bg_home.jpeg);
+    background: var(--color_06) url(../assets/images/bg_home.jpeg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;

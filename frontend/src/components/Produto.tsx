@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/produto.css';
-import img from '../assets/pets.webp';
+import img from '../assets/images/pets.webp';
 import ApiService from '../services/ApiService';
 
 const apiService = new ApiService('http://localhost:3000');

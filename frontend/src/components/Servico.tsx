@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/servico.css';
-import estetica from '../assets/estetica.webp';
-import vet from '../assets/vet(1).png';
-import shampoocondicionador from '../assets/shampoocondicionador.webp';
+import estetica from '../assets/images/estetica.webp';
+import vet from '../assets/images/vet.png';
+import produto from '../assets/images/produto.webp';
 
 const Servico = () => {
     return (

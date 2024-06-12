@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/contato.css';
-import mapa from '../assets/mapa.jpeg';
+import mapa from '../assets/images/mapa.jpeg';
 
 const Contato = () => {
     return (
