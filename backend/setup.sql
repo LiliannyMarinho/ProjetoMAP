@@ -1,3 +1,17 @@
+-- Criar o tipo composto 
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'endereco') THEN
+        CREATE TYPE ENDERECO AS (
+            Rua VARCHAR(100),
+            Bairro VARCHAR(50),
+            Cidade VARCHAR(50),
+            Estado CHAR(2),
+            CEP CHAR(8) 
+        );
+    END IF;
+END $$;
+
 -- CLIENTE table
 CREATE TABLE IF NOT EXISTS CLIENTE (
   IDCliente INT PRIMARY KEY UNIQUE NOT NULL,
