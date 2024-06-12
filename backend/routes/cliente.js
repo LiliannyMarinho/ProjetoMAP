@@ -20,8 +20,15 @@ router.post('/', async (req, res) => {
 
 // Obter todos os clientes
 router.get('/', async (req, res) => {
+  const limit = parseInt(req.query.limit) || 10;
+  const offset = parseInt(req.query.offset) || 0;
+
   try {
-    const result = await _query('SELECT * FROM CLIENTE');
+    const query = `
+      SELECT * FROM CLIENTE
+      LIMIT $1 OFFSET $2;
+    `;
+    const result = await _query(query, [limit, offset]);
     res.status(200).json(result.rows);
   } catch (error) {
     res.status(500).json({ error: error.message });

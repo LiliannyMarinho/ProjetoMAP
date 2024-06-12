@@ -1,0 +1,33 @@
+.about_container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+}
+
+.about_container .imgbg {
+    background: var(--color_06) url(../assets/bg_home.jpeg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.about_container .text p {
+    width: 100%;
+    padding: 0;
+    text-wrap: wrap;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 8px 0;
+}
+
+.about_container .text ul {
+    list-style-type: square;
+}
+
+.about_container .text ul li {
+    margin:  0 0 0 15px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
