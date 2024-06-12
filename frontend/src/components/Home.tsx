@@ -8,7 +8,7 @@ const Home = () => {
                 <article>
                     <h1>Bem-vindo (a)!</h1>
                     <p>Somos o Pata na Porta. E temos os melhores produtos e serviços para o seu pet.</p>
-                    <a href="#contact" className="cta-button">Saiba Mais</a>
+                    <a href="#contact" className="cta-button"><i className="fa-solid fa-circle-info"></i> Saiba mais.</a>
                 </article>
                 <article>
 

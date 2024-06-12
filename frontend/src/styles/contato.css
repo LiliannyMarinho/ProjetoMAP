@@ -8,7 +8,7 @@
 }
 
 .contact-container .text {
-    font-size: 20px;
+    font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 30px;
 }
@@ -108,9 +108,9 @@
     width: 160px !important;
     height: 45px;
     outline: none;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     flex-wrap: nowrap;
     background: var(--color_01);

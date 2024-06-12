@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className='footer'>
         <section>
-            <p>Copyright © Pata na Porta - Todos os Direitos Reservados.</p>
+            <p>Copyright © <i className="fa-solid fa-paw"></i> Pata na Porta - Todos os Direitos Reservados.</p>
         </section>
     </footer>
   );

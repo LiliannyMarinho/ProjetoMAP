@@ -48,7 +48,7 @@ const Contato = () => {
                             <textarea name="message" placeholder="Mensagem" required></textarea>
                         </div>
                         <div className="button-area">
-                            <button type="submit" id="my-form-button">Enviar</button>
+                            <button type="submit" id="my-form-button"><i className="fa-solid fa-paper-plane"></i> Enviar</button>
                         </div>
                     </form>
                 </div>
