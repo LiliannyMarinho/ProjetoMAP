@@ -9,6 +9,7 @@
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
+    box-shadow: 0 0 8px var(--color_05);
     border-radius: 8px;
 }
 
