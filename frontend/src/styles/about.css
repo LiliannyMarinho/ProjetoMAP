@@ -5,12 +5,10 @@
 }
 
 .about_container .imgbg {
-    background: var(--color_06) url(../assets/images/bg_home.webp);
+    background: var(--color_06) url(../assets/images/woman_and_a_dog.webp);
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: cover;
-    box-shadow: 0 0 8px var(--color_05);
-    border-radius: 8px;
+    background-position: center;
+    background-size: contain;
 }
 
 .about_container .text p {
