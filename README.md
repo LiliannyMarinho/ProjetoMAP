@@ -100,29 +100,25 @@ ProjetoMAP/
     DB_PASSWORD=pass
     DB_PORT=5432
    ```
-
 3. Instale as dependências:
    ```bash
    npm install
    ```
-
 4. Inicie o servidor:
    ```bash
    npm start
    ```
-
+   
 ### Frontend
 
 1. Navegue até o diretório `frontend`:
    ```bash
    cd frontend
-   ```
-   
+   ```   
 2. Instale as dependências:
    ```bash
    npm install
-   ```
-   
+   ```   
 3. Inicie o servidor de desenvolvimento:
    ```bash
    npm run dev
